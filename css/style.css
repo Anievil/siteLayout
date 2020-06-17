@@ -1,0 +1,497 @@
+body{
+    width: 1600px;
+    margin: 0 auto;
+}
+/* ---------------- HEADER ------------------*/
+header{
+    height: 124px;
+    width: 100%;
+    background-color: white;
+}
+
+#head{
+    height: 74px;
+}
+
+#head, nav, .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 460px;
+}
+
+nav{
+    height: 55px;
+    background-color: #accdda;
+}
+
+#logoImg{
+    height: 47px;
+    width: 53px;
+}
+
+#logoText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14pt; /* По идеи должно быть 20. Обдумать */
+    font-weight: 700;
+    margin-left: 22px;
+    letter-spacing: 4pt; /* Наугад ставлю */
+    color: #0b2b33;
+    cursor: pointer;
+}
+
+.header , .logo{
+   display: flex;
+   align-items: center;
+}
+
+.verticalHr{
+    border-left:1px solid #000;
+    margin: 0 15px;
+    height: 9pt; /* По идеи должно быть 11. Обдумать */
+}
+
+.headerText, .navigation{
+    font-size: 9pt; /* По идеи должно быть 11. Обдумать */
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.navigation{
+    margin-right: 5px;
+}
+
+.navigation:hover{
+    color: #1a79a8;
+    text-decoration: underline;
+}
+
+.icon{
+    height: 16px;
+    width: auto; 
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.icon + .icon{
+    margin-left: 17px;
+}
+
+.icon:hover{
+    transform: scale(1.3);
+}
+
+.search{
+    width: 120px;
+    height: 87px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top: 34px;
+}
+
+.searchImg{
+    width: 15px;
+    height: 15px;
+
+}
+
+.searchBlock{
+    visibility: hidden;
+    background-image: url('../img/Rectangle\ 3.png');
+    display: flex;
+    flex-direction: row-reverse;
+    height: 72px;
+    width: 269px;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: 9999;
+}
+
+#img{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+input{
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 0;
+    width: 180px;
+}
+
+.openSearch{
+    visibility: visible;
+    opacity: 1;
+}
+
+#activ{
+    color: #008fd5;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- GALLERY ------------------*/
+
+.galleryBlok, .gallary, .preview{
+    background-color: #03678e;
+    width: 100%;
+    height: 485px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.watchGallery{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-size: 14pt;
+    padding: 10px;
+    border-top: double;
+    border-bottom: double;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.watchGallery:hover{
+    color: cyan;
+}
+
+.preview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+}
+
+.previewText{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-size: 82pt;
+    letter-spacing: -5px;
+    color: white;
+    margin: 30px;
+}
+
+.gallary{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+}
+
+.mainSlide, .nextSlide, .prevSlide, .hidden{
+    visibility: visible;
+    opacity: 0.6;
+    height: 485px;
+    width: auto;
+    position: absolute;
+    z-index: 3;
+    border-radius: 15px;
+    margin: 0 auto;
+    transition: all 0.5s ease; 
+}
+
+.mainSlide, .hidden{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.hidden{
+    visibility: hidden;
+    z-index: 0;
+}
+
+.nextSlide{
+    right: 0;
+    left:35%;
+    z-index: 2; 
+    margin: none;
+}
+
+.prevSlide{
+    left: 0;
+    right: 35%;
+    margin: none;
+    z-index: 1;
+}
+
+.next, .prev{
+    background-color: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    margin: auto;
+    width: 64px;
+    height: 64px;
+}
+
+.next{
+    top: 0;
+    right: 0;
+    bottom: 0; 
+}
+
+.prev{
+    top: 0;
+    left: 0;
+    bottom: 0; 
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- SERVICES ------------------*/
+
+.servicesUl, .servicesImgBlock{
+    display: flex;
+    justify-content: center; 
+}
+
+.servicesLi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.servicesLi:hover{
+    transform: scale(1.3);
+}
+
+.services{
+    background: linear-gradient(#22acc1, #0191d3);
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesImgBlock{
+    height: 74px;
+    width: 74px;
+    background-color: rgba(255, 255, 255, 0.16);
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.servicesLi + .servicesLi{
+    margin-left: 80px;
+}
+
+.sP{
+    color: #8cd9ff;
+    font-size: 10pt;
+}
+
+.sH2{
+    font-size: 18pt;
+    margin-bottom: 5px;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- PROJECTS ------------------*/
+
+.projects{
+    min-height: 470px;
+    text-align: center;
+    background-color: #23323a;
+}
+
+.pH2{
+    font-size: 30pt;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    padding-top: 30px;
+    font-weight: 300;
+}
+
+.projectsP{
+    font-size: 14pt;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 25px 0 35px;
+    line-height: 24pt;
+}
+
+.projectCard{
+    height: 300px;
+    width: 400px;
+    margin: 1px;
+    background-color: #cccccc;
+    position: relative;
+}
+
+.projectList{
+    display: flex;
+    height: 300px;
+}
+
+.projectImg, .links, .background{
+    height: 205px;
+    width: 398px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+.projectInfo{
+    background-image: url('../img/proj.png');
+    height: 105px;
+    display: flex;
+    width: 398px;
+    bottom: 0;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text, .like{
+    margin:25px;
+}
+
+.like{
+    display: flex;
+    align-items: center;
+}
+
+.infoH3{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+
+.infoP{
+    color: #6b7a83;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+    font-size: 9pt;
+}
+
+.background{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.links{
+    /* height: 60px; */
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    bottom: -200px;
+    margin: auto;
+}
+
+.link, .look{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.link + .look{
+    margin-left: 20px;
+}
+
+#like{
+    width: 24px;
+    height: 20px;
+    background-image: url('../img/likeNotActiv.png');
+    cursor: pointer;
+}
+.projectCard:hover .links{
+    visibility: visible; 
+    bottom: 95px;
+}
+.projectCard:hover .projectInfo{
+    background-image: url('../img/projActiv.png');
+}
+.projectCard:hover #like{
+    background-image: url('../img/likeActiv.png');
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- callToAction ------------------*/
+
+.callToAction{
+    height: 150px;
+    background-color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.callToActionH2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34pt;
+    font-weight: 300;
+    letter-spacing: -3px;
+}
+
+.callToActionA{
+    color: #008fd5;
+    text-decoration: none;
+}
+
+.checkButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    background-color: #008fd5;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.callToActionP{
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    color: white;
+}
+
+.callToActionHr{
+    color: #eceded;
+    opacity: 0.2;
+    margin: 0;
+}
+
+.checkButton:hover{
+    background-color: #0078b2;
+}
+
+.blog{
+    height: 500px;
+    
+}
