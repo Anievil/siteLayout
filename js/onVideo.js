@@ -7,6 +7,7 @@ video.addEventListener('click', function(){
     videoBlock.classList.add('videoPost');
     playVideo.setAttribute('src', '../video/clip.mp4');
     playVideo.setAttribute('controls','');
+    playVideo.setAttribute('autoplay', '');
     playVideo.classList.add('videoPleyer');
     videoBlock.append(playVideo);
     check = false;
