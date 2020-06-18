@@ -103,7 +103,7 @@ nav{
 .searchImg{
     width: 15px;
     height: 15px;
-
+    cursor: pointer;
 }
 
 .searchBlock{
@@ -372,7 +372,7 @@ input{
     margin:25px;
 }
 
-.like{
+.like, .readMore{
     display: flex;
     align-items: center;
 }
@@ -491,7 +491,239 @@ input{
     background-color: #0078b2;
 }
 
+
+/* ------------------------------------------ */
+
+/* ---------------- blog ------------------*/
+
 .blog{
     height: 500px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.posts{
+    display: flex;
+}
+
+.postHeader{
+    display: flex;
+}
+
+.postHeaderLi{
+    list-style-type: square;
+    color: #9aa9b3;
+}
+
+.postHeaderLi:first-child{
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+.postsLi{
+    max-width: 350px;
+    position: relative;
+}
+
+.postHeaderLi + .postHeaderLi, .postsLi + .postsLi{
+    margin-left: 30px;
+}
+
+.headerLi{
+    color: #008fd5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7pt;
+    margin-right: 10px;
+}
+
+.headerLi:last-child{
+    color: #000;
+}
+
+.postTitle{
+    font-family: 'Open Sans', sans-serif;
+    color: #008fd5;
+    font-size: 13pt;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.videoPost{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99998;
+}
+
+.videoPleyer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 99999;
+}
+
+.postArticle{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    color: #73848e;
+    line-height: 20px;
+}
+
+.title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20pt;
+    margin-bottom: 30px;
+}
+
+.postHr{
+    background-color: rgba(255, 255, 255, 0.16);
+    margin: 15px 0;
+}
+
+.dateDayOfPost{
+    font-family: 'Open Sans', sans-serif;
+    color: #85c9eb;
+    font-weight: 300;
+    font-size: 48pt;
+    margin-bottom: 15px;
+}
+
+.dateMonthOfPost{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    margin-bottom: 15px;
+}
+
+#center{
+    margin: 0 auto;
+    position: absolute;
+    left: 0; right: 0;
+}
+
+#margin + #margin{
+    margin-top: 40px;
+}
+
+.accordeon{
+    width: 270px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.close, .open{
+    background-image: url('../img/open.png');
+    border-right: 1px solid rgba(0, 0, 0, 0.16);
+    height: 45px;
+    width: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+
+.close{
+    background-image: url('../img/close.png');
+}
+
+.accordeonTitle{
+    margin: 0 auto;
+    font-size: 14pt;
+}
+
+.accordeonInfo{
+    width: 270px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+}
+
+.accordeonText{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    color: #73848e;
+    line-height: 20px;
+}
+
+.accordeonText + .accordeonText{
+    margin-top: 20px;
+}
+
+.coment{
+    width: 200px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 15px;
+    line-height: 20px;
+}
+#first{
+    font-size: 12pt;
+    color: #008fd5;
+    margin-bottom: 20px;
+}
+#second{
+    font-size: 10pt;
+    color: #73848e;
+}
+
+.simbol{
+    height: 48px;
+    width: 48px;
+}
+
+.comentBlock{
+    display: flex;
+}
+
+.comentAuthor{
+    height: 100px;
+    width: 270px;
+    background-image: url('../img/comentator.png');
+    background-repeat: no-repeat;
+}
+
+.comentatorInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 81px;
+}
+
+.comentatorProfile {
+    margin-left: 25px;
+}
+
+.Name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.workPlace{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8pt;
+    color: #8cd9ff;
+    font-weight: 300;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- blueBox ------------------*/
+
+.blueBox{
+    height: 430px;
+    background-color: #098ed1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
