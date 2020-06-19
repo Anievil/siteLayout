@@ -2,6 +2,9 @@ body{
     width: 1600px;
     margin: 0 auto;
 }
+
+
+
 /* ---------------- HEADER ------------------*/
 header{
     height: 124px;
@@ -13,7 +16,7 @@ header{
     height: 74px;
 }
 
-#head, nav, .menu{
+#head, nav, .menu, .header , .logo{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -21,10 +24,7 @@ header{
 }
 
 .menu{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     width: 460px;
 }
 
@@ -40,27 +40,22 @@ nav{
 
 #logoText{
     font-family: 'Montserrat', sans-serif;
-    font-size: 14pt; /* По идеи должно быть 20. Обдумать */
+    font-size: 14pt;
     font-weight: 700;
     margin-left: 22px;
-    letter-spacing: 4pt; /* Наугад ставлю */
+    letter-spacing: 4pt;
     color: #0b2b33;
     cursor: pointer;
-}
-
-.header , .logo{
-   display: flex;
-   align-items: center;
 }
 
 .verticalHr{
     border-left:1px solid #000;
     margin: 0 15px;
-    height: 9pt; /* По идеи должно быть 11. Обдумать */
+    height: 9pt;
 }
 
 .headerText, .navigation{
-    font-size: 9pt; /* По идеи должно быть 11. Обдумать */
+    font-size: 9pt;
     font-family: 'Open Sans', sans-serif;
     color: black;
     text-decoration: none;
@@ -95,11 +90,12 @@ nav{
     width: 120px;
     height: 87px;
     display: flex;
-    flex-direction: row-reverse;
-    position: relative;
     top: 34px;
 }
-
+.search, .searchBlock{
+    flex-direction: row-reverse;
+    position: relative;
+}
 .searchImg{
     width: 15px;
     height: 15px;
@@ -108,9 +104,7 @@ nav{
 
 .searchBlock{
     visibility: hidden;
-    background-image: url('../img/Rectangle\ 3.png');
-    display: flex;
-    flex-direction: row-reverse;
+    background-image: url('../img/background/Rectangle\ 3.png');
     height: 72px;
     width: 269px;
     position: absolute;
@@ -127,7 +121,7 @@ nav{
     right: 20px;
 }
 
-input{
+#search{
     border: none;
     position: absolute;
     bottom: 20px;
@@ -157,7 +151,7 @@ input{
     transition: all 0.5s ease;
 }
 
-.watchGallery{
+.watchGallery, .previewText{
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
@@ -182,12 +176,11 @@ input{
 }
 
 .previewText{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
     font-size: 82pt;
     letter-spacing: -5px;
-    color: white;
+    cursor: default;
     margin: 30px;
+    border: none;
 }
 
 .gallary{
@@ -317,22 +310,20 @@ input{
     background-color: #23323a;
 }
 
-.pH2{
+.pH2, .projectsP, .infoH3{
     font-size: 30pt;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     padding-top: 30px;
-    font-weight: 300;
 }
 
 .projectsP{
     font-size: 14pt;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    color: #5a7482;
     margin: 25px 0 35px;
     line-height: 24pt;
+    padding: 0;
 }
 
 .projectCard{
@@ -358,31 +349,26 @@ input{
 }
 
 .projectInfo{
-    background-image: url('../img/proj.png');
+    background-image: url('../img/background/proj.png');
     height: 105px;
-    display: flex;
     width: 398px;
     bottom: 0;
     position: absolute;
-    justify-content: space-between;
-    align-items: center;
-}
+    justify-content: space-between;}
 
 .text, .like{
     margin:25px;
 }
 
-.like, .readMore{
+.like, .readMore, .projectInfo, .links, .link, .look{
     display: flex;
     align-items: center;
 }
 
 .infoH3{
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
     margin-bottom: 10px;
     font-size: 14pt;
+    padding: 0;
 }
 
 .infoP{
@@ -397,10 +383,7 @@ input{
 }
 
 .links{
-    /* height: 60px; */
     visibility: hidden;
-    display: flex;
-    align-items: center;
     justify-content: center; 
     bottom: -200px;
     margin: auto;
@@ -410,8 +393,6 @@ input{
     width: 60px;
     height: 60px;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
     justify-content: center;
     cursor: pointer;
 }
@@ -423,7 +404,7 @@ input{
 #like{
     width: 24px;
     height: 20px;
-    background-image: url('../img/likeNotActiv.png');
+    background-image: url('../img/icons/likeNotActiv.png');
     cursor: pointer;
 }
 .projectCard:hover .links{
@@ -431,17 +412,17 @@ input{
     bottom: 95px;
 }
 .projectCard:hover .projectInfo{
-    background-image: url('../img/projActiv.png');
+    background-image: url('../img/background/projActiv.png');
 }
 .projectCard:hover #like{
-    background-image: url('../img/likeActiv.png');
+    background-image: url('../img/icons/likeActiv.png');
 }
 
 /* ------------------------------------------ */
 
 /* ---------------- callToAction ------------------*/
 
-.callToAction{
+.callToAction, .checkButton{
     height: 150px;
     background-color: #fcfcfc;
     display: flex;
@@ -449,7 +430,7 @@ input{
     justify-content: space-around;
 }
 
-.callToActionH2{
+.callToActionH2, .callToActionP{
     font-family: 'Open Sans', sans-serif;
     font-size: 34pt;
     font-weight: 300;
@@ -462,8 +443,6 @@ input{
 }
 
 .checkButton{
-    display: flex;
-    align-items: center;
     justify-content: center;
     width: 200px;
     height: 60px;
@@ -475,9 +454,8 @@ input{
 
 .callToActionP{
     margin-left: 10px;
-    font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
-    font-weight: 300;
+    letter-spacing: unset;
     color: white;
 }
 
@@ -503,11 +481,7 @@ input{
     justify-content: space-around;
 }
 
-.posts{
-    display: flex;
-}
-
-.postHeader{
+.posts, .postHeader{
     display: flex;
 }
 
@@ -530,7 +504,7 @@ input{
     margin-left: 30px;
 }
 
-.headerLi{
+.headerLi, .postTitle, .postArticle, .title, .dateDayOfPost, .dateMonthOfPost, .coment, .Name, .workPlace{
     color: #008fd5;
     font-family: 'Open Sans', sans-serif;
     font-size: 7pt;
@@ -542,10 +516,8 @@ input{
 }
 
 .postTitle{
-    font-family: 'Open Sans', sans-serif;
-    color: #008fd5;
     font-size: 13pt;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
     line-height: 20px;
 }
 
@@ -570,16 +542,16 @@ input{
 }
 
 .postArticle{
-    font-family: 'Open Sans', sans-serif;
     font-size: 10pt;
     color: #73848e;
     line-height: 20px;
+    margin: 0;
 }
 
 .title{
-    font-family: 'Open Sans', sans-serif;
     font-size: 20pt;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    color: #222;
 }
 
 .postHr{
@@ -588,17 +560,15 @@ input{
 }
 
 .dateDayOfPost{
-    font-family: 'Open Sans', sans-serif;
-    color: #85c9eb;
     font-weight: 300;
     font-size: 48pt;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 }
 
 .dateMonthOfPost{
-    font-family: 'Open Sans', sans-serif;
     font-size: 11pt;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
+    color: #222;
 }
 
 #center{
@@ -621,7 +591,7 @@ input{
 }
 
 .close, .open{
-    background-image: url('../img/open.png');
+    background-image: url('../img/icons/open.png');
     border-right: 1px solid rgba(0, 0, 0, 0.16);
     height: 45px;
     width: 45px;
@@ -630,7 +600,7 @@ input{
 } 
 
 .close{
-    background-image: url('../img/close.png');
+    background-image: url('../img/icons/close.png');
 }
 
 .accordeonTitle{
@@ -650,6 +620,11 @@ input{
     font-size: 13pt;
     color: #73848e;
     line-height: 20px;
+
+    color: #008fd5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7pt;
+    margin-right: 10px;
 }
 
 .accordeonText + .accordeonText{
@@ -658,10 +633,11 @@ input{
 
 .coment{
     width: 200px;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 15px;
+    margin: 0 0 0 15px;
     line-height: 20px;
+    color: #222;
 }
+
 #first{
     font-size: 12pt;
     color: #008fd5;
@@ -684,7 +660,7 @@ input{
 .comentAuthor{
     height: 100px;
     width: 270px;
-    background-image: url('../img/comentator.png');
+    background-image: url('../img/background/comentator.png');
     background-repeat: no-repeat;
 }
 
@@ -692,7 +668,6 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
-
     height: 81px;
 }
 
@@ -701,18 +676,17 @@ input{
 }
 
 .Name{
-    font-family: 'Open Sans', sans-serif;
     font-size: 14pt;
     color: white;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 .workPlace{
-    font-family: 'Open Sans', sans-serif;
     font-size: 8pt;
     color: #8cd9ff;
     font-weight: 300;
+    margin-right: 0;
 }
 
 /* ------------------------------------------ */
@@ -727,3 +701,409 @@ input{
     align-items: center;
 }
 
+.picturesFromBlueBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screens{
+    position: relative;
+    width: 550px;
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+.screen1, .screen2{
+    position: absolute;
+    top: 0; bottom: 0;
+    margin: auto;
+    z-index: 1;
+    box-shadow: 0px 4px 3px #033046;
+}
+
+.screen1{
+    left: 150px;
+    z-index: 2;
+    -webkit-box-shadow: -83px 36px 57px -55px rgba(0,0,0,1);
+    -moz-box-shadow: -83px 36px 57px -55px rgba(0,0,0,1);
+    box-shadow: -83px 36px 57px -55px rgba(0,0,0,1);
+}
+
+.infoBlock{
+    display: flex;
+    width: 549px;
+}
+
+.infoBlockImg{
+    width: 35px;
+    height: 37px;
+    margin-right: 30px;
+}
+
+.infoBlockText{
+    width: 450px;
+}
+
+.infoBlockH2, .infoBlockP{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20pt;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.infoBlockP{
+    font-size: 10pt;
+    color: #8cd9ff;
+    line-height: 20px;
+    margin: 0;
+}
+
+.blueBoxHr{
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- ourTeam ------------------*/
+
+.ourTeam{
+    height: 549px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #353f4b;
+}
+
+.ourTeamH2, .teammateName, .teammateWork, .smthAbout{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30pt;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.teammates{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.teammate{
+    width: 250px;
+    text-align: center;
+}
+
+.teammatePicture{
+    height: 181px;
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+.teammateProfilePicture{
+    margin: 0 25px;
+}
+
+.teammateName{
+    margin-bottom: 5px;
+    font-size: 14pt;
+}
+
+.teammateWork{
+    color: #2691ac;
+    font-size: 9pt;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.smthAbout{
+    color: #b9c3ca;
+    font-size: 9pt;
+    margin-bottom: 20px;
+}
+
+.ourTeamHr{
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- sponsors ------------------*/
+
+.sponsors{
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+    height: 150px;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- feedback ------------------*/
+
+.feedback{
+    height: 442px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #495b69;
+}
+
+.contacts{
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0;
+    align-items: center;
+}
+
+.input{
+    background-color: rgba(0, 0, 0, 0);
+    width: 500px;
+    border: none;
+    margin-left: 20px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+}
+
+.input::placeholder{
+    color: black;
+}
+
+#message{
+    margin: 20px;
+    width: 500px;
+    height: 60px;
+    resize: none;
+}
+
+.contactsIcon{
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 20px;
+}
+
+.message{
+    width: 550px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.messageButtonCont{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}
+
+.messageButton{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9pt;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.messageButton + .messageButton{
+    margin-left: 10px;
+} 
+
+.clearImg{
+    margin-left: 5px;
+}
+
+.feedbackH2{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30pt;
+    margin: 10px 0 30px;
+    font-weight: 300;
+}
+
+/* ------------------------------------------ */
+
+/* ---------------- footer ------------------*/
+
+.quotes{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #008fd5;
+    height: 120px;
+}
+
+.quotesImgCont{
+    background-image: url('../img/background/backgrountForBigIcon.png');
+    height: 120px;
+    width: 138px;
+    align-items: center;
+    display: flex;
+}
+
+.quotesImg{
+    margin-left: 30px;
+}
+
+.LinkOn{
+    text-decoration: none;
+    font-style: italic;
+    color: #bbdbef;
+}
+
+.quote{
+    margin-bottom: 5px;
+}
+
+.quoteDate{
+    text-decoration: none;
+    font-style: italic;
+    color: #bbdbef;
+    font-size: 8pt;
+}
+
+.navButton{
+    margin: 0 5px
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #19242a;
+    height: 320px;
+    color: white;
+}
+
+.marine{
+    width: 250px;
+    margin-top: 50px;
+}
+
+.marine + .marine{
+    margin-left: 50px;
+}
+
+.newColor{
+    color: #547e93 !important;
+}
+
+#margin{
+    margin-bottom: 20px;
+}
+
+.quoteCont{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    margin: 0 50px;
+}
+
+.discription{
+    color: #7ca1b3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8pt;
+    line-height: 20px;
+}
+
+#hr{
+    height: 8pt;
+    width: 1px;
+    padding: 0;
+    margin: 0 5px;
+    border: none;
+    background-color: #7ca1b3;
+}
+
+.cursive{
+    color: #bdd2dc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.footerHr{
+    margin: 10px 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.16);
+    height: 1px;
+}
+
+.footerTitle{
+    color: #7ca1b3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18pt;
+    font-weight: 300;
+}
+
+#left{
+    margin-left: 10px;
+}
+
+.date{
+    display: flex;
+    width: 130px;
+    align-items: center;
+}
+
+.contactBlock{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.footerIcon{
+    max-width: 18px;
+    max-height: 24px;
+}
+
+.footerInputBlock{
+    margin: 10px 0;
+    height: 40px;
+    width: 270px;
+    background-color: #23323a;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerInput{
+    background-color: transparent;
+    border: none;
+    width: 230px;
+    color: #7ca1b3;
+    font-family: 'Open Sans', sans-serif;
+    height: 40px;
+}
+
+.footerSubmit{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.end{
+    color: #547e93;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+    background-color: #141d22;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
