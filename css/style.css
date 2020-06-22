@@ -1,8 +1,13 @@
+body{
+    width: 1600px;
+    margin: 0 auto;
+}
 
+@media(max-width: 1600px){
     body{
         width: 100%;
     }
-
+}
 /* ---------------- HEADER ------------------*/
 
 header{
