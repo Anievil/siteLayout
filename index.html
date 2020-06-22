@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Marine</title>
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
@@ -16,13 +17,15 @@
                 <div class="header">
                     <p class="headerText">CALL US: +1 80 450 17 04</p>
                     <hr class="verticalHr">
-                    <img class="icon" src="./img/icons/facebook.png" alt="facebook">
-                    <img class="icon" src="./img/icons/twitter.png" alt="twitter">
-                    <img class="icon" src="./img/icons/skype.png" alt="skype">
-                    <img class="icon" src="./img/icons/google.png" alt="google">
-                    <img class="icon" src="./img/icons/v.png" alt="v">
-                    <img class="icon" src="./img/icons/in.png" alt="in">
-                    <img class="icon" src="./img/icons/instagram.png" alt="instagram">
+                    <div  style="display: flex;">
+                        <img class="icon" src="./img/icons/facebook.png" alt="facebook">
+                        <img class="icon" src="./img/icons/twitter.png" alt="twitter">
+                        <img class="icon" src="./img/icons/skype.png" alt="skype">
+                        <img class="icon" src="./img/icons/google.png" alt="google">
+                        <img class="icon" src="./img/icons/v.png" alt="v">
+                        <img class="icon" src="./img/icons/in.png" alt="in">
+                        <img class="icon" src="./img/icons/instagram.png" alt="instagram">
+                    </div>
                 </div>
             </div>
             <nav>
@@ -48,6 +51,9 @@
                         <img src="./img/icons/menuit.png" alt="icon">
                     </li>
                 </ul>
+                <div class="openMenu">
+
+                </div>
                 <div class="search">
                     <img class="searchImg" src="./img/icons/Search.png" alt="Search">
                     <div class="searchBlock">
@@ -222,7 +228,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="callToAction">
+            <section class="callToAction"> 
                 <h2 class="callToActionH2"><a class="callToActionA" href="#">A fully responsive theme</a> with clean design for your success!</h2>
                 <button class="checkButton">
                     <img src="./img/icons/info.png" alt="icon info">
@@ -356,7 +362,7 @@
                     </div>
                     <img class="keyboard" src="./img/pic/keyboard.png" alt="keyboard">
                 </div>
-                <div style="width: 550px; margin-left: 60px;">
+                <div class="infoBlockCont">
                     <div class="infoBlock">
                             <img class="infoBlockImg" src="./img/icons/flexibleSolutions.png" alt="Flexible Solutions">
                             <div class="infoBlockText"> 
@@ -418,7 +424,7 @@
                             <img class="teammateProfilePicture" src="./img/developers/Kojima.jpg" alt="Profile picture">
                         </div>
                         <h2 class="teammateName">
-                            Dev
+                            Genius
                         </h2>
                         <h3 class="teammateWork">
                             Also a developer
@@ -513,11 +519,11 @@
                         <buuton class="messageButton"> 
                             <p>CLEAR</p>
                             <img class="clearImg" src="./img/icons/clear.png" alt="clear">    
-                        </buuton>
+                        </button>
                     </div>
                 </form>
             </section>
-        </main>
+        </main> 
 
         <footer>    
             <div class="quotes">
@@ -615,5 +621,6 @@
         <script src="js/gallery.js"></script>
         <script src="js/logo.js"></script>
         <script src="js/onVideo.js"></script>
+        <script src="js/openMenu.js"></script>
     </body>
 </html>
